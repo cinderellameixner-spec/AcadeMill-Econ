@@ -1,0 +1,10 @@
+# 原始论文 PDF（源材料，体积大，不入库）
+inbox/*.pdf
+
+# 阅读/导出过程的临时中间产物
+inbox/.attach_pdf.py
+inbox/.p*_export.json
+inbox/P*_pages_*.txt
+
+# 本机特有的权限配置（Claude Code 本地文件，不跨机器共享）
+.claude/settings.local.json
