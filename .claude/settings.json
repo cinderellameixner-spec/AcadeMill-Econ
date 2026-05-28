@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where uvx *)",
+      "Bash(where npm *)",
+      "Bash(where uv *)",
+      "PowerShell(Get-Command uvx,uv,npm,npx -ErrorAction SilentlyContinue)",
+      "PowerShell($cmds = @\\('uvx','uv','npm','npx','pipx','python'\\); foreach\\($c in $cmds\\){ $g = Get-Command $c -ErrorAction SilentlyContinue; if\\($g\\){ \"$c -> $\\($g.Source\\)\" } else { \"$c -> NOT FOUND\" } })",
+      "WebFetch(domain:github.com)",
+      "PowerShell(& \"D:\\\\app\\\\python3.11\\\\python.exe\" --version)",
+      "PowerShell(& \"D:\\\\app\\\\python3.11\\\\Scripts\\\\pip.exe\" --version)",
+      "PowerShell(& \"D:\\\\app\\\\python3.11\\\\Scripts\\\\pip.exe\" index versions zotero-mcp 2>&1)",
+      "PowerShell(& \"D:\\\\app\\\\python3.11\\\\Scripts\\\\pip.exe\" index versions zotero-mcp-server 2>&1)",
+      "PowerShell(& \"D:\\\\app\\\\python3.11\\\\Scripts\\\\pip.exe\" install --upgrade zotero-mcp-server 2>&1)",
+      "Read(//d/app/python3.11/Scripts/**)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:23119/api/users/0/items?limit=1\" -TimeoutSec 5 -UseBasicParsing; \"Zotero API OK status=$\\($r.StatusCode\\)\" } catch { \"Zotero API ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(& \"D:\\\\app\\\\python3.11\\\\Scripts\\\\zotero-mcp.exe\" setup-info 2>&1)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:23119/connector/ping\" -TimeoutSec 5 -UseBasicParsing; \"ping status=$\\($r.StatusCode\\) body=$\\($r.Content.Substring\\(0,[Math]::Min\\(200,$r.Content.Length\\)\\)\\)\" } catch { \"ping ERROR: $\\($_.Exception.Message\\)\" }; \"---\"; try { $r2 = Invoke-WebRequest -Uri \"http://127.0.0.1:23119/api/users/0/items?limit=1&format=json\" -TimeoutSec 5 -UseBasicParsing; \"api status=$\\($r2.StatusCode\\) bytes=$\\($r2.RawContentLength\\)\" } catch { \"api ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(Get-NetTCPConnection -LocalPort 23119 -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command claude -ErrorAction SilentlyContinue)",
+      "PowerShell(claude --version 2>&1)",
+      "PowerShell(claude mcp add --help 2>&1)",
+      "PowerShell(claude mcp add zotero -s user -e ZOTERO_LOCAL=true -e PYTHONIOENCODING=utf-8 -- \"D:\\\\app\\\\python3.11\\\\Scripts\\\\zotero-mcp.exe\" serve 2>&1)",
+      "PowerShell(claude mcp list 2>&1)",
+      "mcp__zotero__zotero_search_items",
+      "mcp__zotero__zotero_semantic_search",
+      "mcp__zotero__zotero_list_libraries",
+      "mcp__zotero__zotero_get_recent",
+      "mcp__chrome-devtools__puppeteer_navigate",
+      "PowerShell(claude mcp get chrome-devtools 2>&1)",
+      "PowerShell(\"---\")",
+      "PowerShell(claude mcp remove chrome-devtools -s user 2>&1)",
+      "PowerShell(npm install -g chrome-devtools-mcp 2>&1)",
+      "PowerShell(Get-Command chrome-devtools-mcp -ErrorAction SilentlyContinue)",
+      "PowerShell(chrome-devtools-mcp --help 2>&1)",
+      "Read(//c/Users/���/AppData/Roaming/**)",
+      "Bash(ls -la \"/c/Users/沈璞/AppData/Roaming/npm/\" 2>&1 | head -20)",
+      "Read(//c/Users/沈璞/AppData/Roaming/npm//**)"
+    ],
+    "additionalDirectories": [
+      "d:\\MyDesktop\\cc.project\\paper assist"
+    ]
+  }
+}

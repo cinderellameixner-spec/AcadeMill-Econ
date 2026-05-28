@@ -1,0 +1,568 @@
+PAGES: 20
+
+===== PAGE 14 =====
+2024 年第3 期
+（三）内生性问题
+除了反向因果关系，还可能存在遗漏变量问题。为了更好地解决内生性问题，我们构建一个工具
+变量（IV）。对于使用数字技术进行数字化转型的公司来说，科技人才供给是一个关键问题。因此，在
+现有文献中，Babina et al.（2024）使用企业与AI强校之间的联系作为企业应用AI的IV，并研究AI对企
+业增长的影响。背后的逻辑是：企业从AI强校（以AI领域的论文发表来度量）雇佣的员工越多，就越可
+能应用AI技术。类似地，张叶青等（2021）用“珠峰计划”作为企业采用大数据技术的IV，研究大数据对
+企业价值（托宾Q）的影响。参考张叶青等（2021）的做法，本文使用“珠峰计划”作为数字化转型的IV。
+“珠峰计划”是“基础学科拔尖学生培养试验计划”的简称，是国家为回应“钱学森之问”而推出的
+人才培养计划。主要内容是在高水平研究型大学和科研院所的优势基础学科建设一批国家青年英
+才培养基地，建立拔尖人才重点培养体制机制，吸引最优秀的学生投身基础科学研究。第一批“珠峰
+计划”囊括了17 所高校，选择了清华、北大等高校的数学、物理、化学、生物、计算机科学等理工类相
+关专业作为试点。该计划提高了高校毕业生选择科技类职业的概率，有效增加了科技类人才供给
+（宋弘和陆毅，2020）。我们推测，上市公司办公地址距离“珠峰计划”17 个试点学校的距离越远，越
+不可能招聘到科技类人才，就越不可能进行数字化转型。与此同时，当地上市公司数目越多，每个上
+市公司受到该政策的影响就越弱，也越不太可能进行数字化转型。因此，试点学校的距离和上市公
+司数量均与企业数字化转型的概率成反比，这满足了IV 的相关性假设。定义的IV 如下：
+IVi，t = mSumdist*mN i，t*Postt
+其中，i 代表上市公司，t 代表年份，mSumdis 表示上市公司i 登记的办公地址到17 个试点学校主
+校区直线距离之和除以10000（km），mN 表示t 年公司i 所在城市c 中的上市公司总数除以1000。由
+于受“珠峰计划”影响的第一批大学生大部分是2010 年入学的本科生，他们的毕业年份为2014 年及
+其之后，因此我们乘以一个时间虚拟变量Post，2014 年及之前取值为0，2014 年之后取值为1。①
+表3 提供了工具变量法的回归结果。第（1）列是第一阶段回归结果，其中IV 的系数显著为负，
+且F 统计量大于10，这符合相关性的预期。与此同时，我们认为“珠峰计划”本身不会直接影响某个
+企业的数字化转型，因此该IV 满足排他性假设。第（2）列和第（3）列的结果表明，使用IV 之后，关键
+解释变量企业数字化转型的系数在5% 的水平上显著为正。这说明本文的结论是稳健的。
+表3
+工具变量法回归结果
+变量
+IV
+DigiTech
+Cragg-Donald Wald F statistic
+Kleibergen-Paap Wald rk F statistic
+Controls
+Year FE
+Firm FE
+N
+R
+2
+（1）
+DigiTech
+-0.102
+***
+（0.0300）
+21.487
+11.456
+Yes
+Yes
+Yes
+25107
+（2）
+ROA
+9.455
+**
+（4.599）
+Yes
+Yes
+Yes
+25107
+-0.232
+（3）
+ROE
+21.628
+**
+（10.053）
+Yes
+Yes
+Yes
+25107
+-0.346
+①　考虑到部分学生会选择读研，从而推迟毕业年份，我们将毕业年份从2014 年先后改为2015 年、2016 年、2017 年和2018 年，
+结果依然稳健。限于篇幅，此处省略，作者留存备索。
+47
+
+===== PAGE 15 =====
+金星晔等：企业数字化转型的测度难题：基于大语言模型的新方法与新发现
+（四）不同数字技术的影响
+为了探究企业使用某一种数字技术（大数据、人工智能、移动互联、云计算、物联网和区块链）对
+财务绩效的影响，本节重新选取处理组和对照组。我们将不使用任何数字技术的企业定义为对照
+组，赋值为0；将单独使用大数据、人工智能、移动互联、云计算、物联网和区块链的企业分别记作
+BD、AI、MI、CC、IoT 和BC，并赋值为1。表4 展示了企业单独使用某种数字技术对ROA 的影响。第
+（1）—（5）列显示，无论企业单独使用哪一种数字技术（除区块链），都能显著提高企业的ROA。这与
+已有研究的结果是一致的。值得注意的是，第（6）列显示区块链技术的回归系数并不显著。原因可
+能是，区块链技术虽然有助于提高企业信息的安全性（Sharma et al.， 2023），但对股价的影响往往是
+昙花一现，而且放大了企业的收益风险（Jain & Jain， 2019）。①当我们将ROE 作为被解释变量时，也
+得到了类似结果。②
+表4
+企业使用不同数字技术对ROA 的影响
+变量
+BD
+AI
+MI
+CC
+IoT
+BC
+Controls
+Year FE
+Firm FE
+N
+R
+2
+（1）
+ROA
+0.533
+***
+（0.151）
+Yes
+Yes
+Yes
+16627
+0.193
+（2）
+ROA
+0.544
+***
+（0.125）
+Yes
+Yes
+Yes
+19150
+0.198
+（3）
+ROA
+0.344
+**
+（0.150）
+Yes
+Yes
+Yes
+16643
+0.198
+（4）
+ROA
+0.686
+***
+（0.217）
+Yes
+Yes
+Yes
+13476
+0.189
+（5）
+ROA
+0.447
+***
+（0.102）
+Yes
+Yes
+Yes
+21821
+0.202
+（6）
+ROA
+-0.108
+（0.370）
+Yes
+Yes
+Yes
+10714
+0.187
+（五）分位数回归
+上文分析表明，企业数字化转型能够显著提高企业的财务绩效。但对于不同财务绩效的企业
+而言，使用数字技术的影响可能存在差异。同时，最小二乘法模型中残差平方和易受极端值影响，
+回归结果容易出现偏差。为了进一步探究数字化转型对于不同财务绩效企业的影响，我们使用分
+位数回归方法，分别选取10%、25%、50%、75% 和90% 这五个分位点进行分位数回归。
+本文将ROA 作为被解释变量，回归结果如表5 所示。第（1）—（3）列回归结果表明，数字化转型
+对企业ROA 有着显著的正向影响；第（4）（5）列结果表明，随着分位数的上升，在75% 和90% 的高分
+位点上，数字化转型对企业ROA 的影响并不显著。一种可能的解释是，数字技术（例如云计算）为新
+兴的中小企业赋能，通过轻资产化减轻了它们在大额资本支出和规模方面的相对劣势（Jin & McEl⁃
+①　我们在访谈中了解到，目前区块链技术的应用处于初级阶段，且几乎都是私链或者联盟链，真正去中心化的公链极少。
+②　限于篇幅，企业使用不同数字技术对ROE 的影响的结果请见本刊网站登载的附表8。
+48
+
+===== PAGE 16 =====
+2024 年第3 期
+heran， 2017），因此数字化转型可以为绩效较差的企业提供“弯道超车”的机会。当本文将ROE 作为
+被解释变量时，结果类似。①
+结合上一小节的内容，本文得到三点结论：第一，企业在进行数字化转型时使用的数字技术不
+同，数字化转型的效果就不同。目前的证据表明，使用区块链技术并不会改善企业的财务绩效。第
+二，企业数字化转型的效果存在异质性，即对于财务绩效较差的企业来说，数字化转型的效果较好，
+但对于财务绩效较好特别是很好的企业来说，数字化转型的效果并不显著。第三，使用不同的方法
+构造数字化转型指标，会出现不同的回归结果。这回应了本文在引言中提到的数字化转型成败之
+争。正是因为不同企业数字化转型的路径（数字技术）不同，基础（财务绩效）不同，以及学者们采取
+的测度方法不同，所以才会出现不同的结果。这也说明，研究企业数字化转型，必须区分不同的数
+字技术和不同的财务基础，并且构造一个统一、可比的企业数字化转型指标。
+表5
+企业数字化转型对ROA 的不同分位数回归
+变量
+DigiTech
+Controls
+Year FE
+Firm FE
+N
+（1）
+QR_10
+0.341
+*
+（0.198）
+Yes
+Yes
+Yes
+25107
+（2）
+QR_25
+0.154
+*
+（0.0803）
+Yes
+Yes
+Yes
+25107
+（3）
+QR_50
+0.346
+***
+（0.107）
+Yes
+Yes
+Yes
+25107
+（4）
+QR_75
+0.147
+（0.112）
+Yes
+Yes
+Yes
+25107
+（5）
+QR_90
+0.158
+（0.192）
+Yes
+Yes
+Yes
+25107
+（六）渠道分析
+接下来本文探讨企业数字化转型提高企业财务绩效的渠道。根据已有文献，可以将数字化
+转型的渠道归纳为三种：第一种是效率渠道。例如，刘飞（2020）和赵宸宇等（2021）均发现，企业
+数字化转型能够显著提高生产率，而效率的提升将提高企业的财务绩效（包群和梁贺，2022）。第
+二种是收入渠道。例如，Yadav（2014）发现，数字化转型会促进企业参与国际贸易活动。此外，消
+费数据的积累和分析也有助于建立产品忠诚度，从而鼓励消费者重复消费（Hänninen et al.，
+2017）。这些都有助于企业增加营业收入，进而提高企业的财务绩效。第三种是成本渠道。例
+如，Shivajee et al.（2019）发现，企业数字化转型有助于降低制造成本，减少零件报废和原材料浪
+费。何帆和刘红霞（2019）也揭示了这一渠道。为此，本文将验证效率渠道、收入渠道和成本渠道
+是否成立。
+为了检验效率渠道，本文使用企业的TFP（全要素生产率）作为因变量。测算企业TFP 的核心
+问题是解决生产函数估算中的内生性问题，而ACF 方法能够有效解决OP 和LP 法在估计劳动力投
+入弹性时可能出现的多重共线性问题，因此被广为接受（Loecker & Warzynski， 2012）。在表6 第（1）
+（2）列，我们采用ACF 方法，先后基于销售额和经济增加值计算了TFP1 和TFP2。
+为了检验收入渠道，在表6 的第（3）列，本文将总收入的对数（lnIncome）作为因变量。为了检
+验成本渠道，在表6 第（4）列将总成本的对数（lnCost）作为被解释变量。综合成本和收入两个维
+度，我们在第（5）列加入了成本收入比（cost2Income=总成本/总收入）作为被解释变量。表6 显示，
+企业进行数字化转型后，TFP 以及总成本分别显著提高和降低，这印证了效率渠道和成本渠
+道。② 但同时，总收入并未显著增加，这说明收入渠道未被证实。同时，表6 的第（5）列显示每单
+①　限于篇幅，ROE 为被解释变量的分位数回归结果请见本刊网站登载的附表9。
+②　根据江艇（2022），经济学文献在分析渠道时，关键是验证解释变量对渠道（中介变量）的影响，因为渠道变量对因变量的影
+响通常是不言自明的。为此，我们省略了渠道变量对企业财务绩效的回归分析。
+49
+
+===== PAGE 17 =====
+金星晔等：企业数字化转型的测度难题：基于大语言模型的新方法与新发现
+位的收入所需的成本下降了，这说明成本收入比下降，因此总体上数字技术的使用提高了企业的
+财务绩效。
+表6
+渠道分析
+变量
+DigiTech
+Controls
+YearFE
+FirmFE
+N
+R
+2
+（1）
+TFP1
+0.0121
+**
+（0.00516）
+Yes
+Yes
+Yes
+21934
+0.422
+（2）
+TFP2
+0.0214
+*
+（0.0121）
+Yes
+Yes
+Yes
+18743
+0.0989
+（3）
+lnIncome
+-0.00184
+（0.00682）
+Yes
+Yes
+Yes
+25107
+0.727
+（4）
+lnCost
+-0.0187
+***
+（0.00720）
+Yes
+Yes
+Yes
+25107
+0.718
+（5）
+cost2Income
+-0.0164
+***
+（0.00268）
+Yes
+Yes
+Yes
+25107
+0.145
+五、 结论与政策启示
+作为世界上最大的发展中国家，中国在数字经济领域后来居上，已经成为数字经济大国。在中
+国数字经济快速发展的过程中，企业的数字化转型是非常重要的微观基础。在中国企业数字化转
+型实践备受关注的同时，学术界对企业数字化转型的研究也如火如荼。然而，目前学术界在测度企
+业数字化转型指标时，存在测度对象不统一明确、测度方法不科学准确问题，导致对企业数字化转
+型的现状和效果存在严重分歧。为了更好地推进企业数字化转型的深入研究，同时呼应中国企业
+数字化转型的难题，本文基于前沿的机器学习和大语言模型，开发了一套新的企业数字化转型指
+标。为此，本文首先收集了2006—2020 年中国上市公司的年报文本作为分析对象。然后，整理了
+一个包含311 个数字技术关键词的词典，并将数字技术分为六种类型：大数据、人工智能、移动互
+联、云计算、物联网和区块链。接着，对年报文本进行人工标注，形成训练集。之后，采用有监督的
+机器学习方法，使用百度开发的ERNIE 大语言模型，对年报文本进行预测，判断企业是否使用了数
+字技术以及使用了何种数字技术，在此基础上构造了中国上市公司数字化转型指标。多项交叉验
+证结果表明，本文开发的新指标明显优于主流的词典法，并且符合中国企业数字化转型的实践。在
+本文的后半部分，我们使用新方法构建的指标，证明中国上市公司的企业数字化转型显著提高了财
+务绩效。而且，对于财务业绩比较差的上市公司而言，数字化转型的效果更加明显。进一步，本文
+发现数字化转型提高财务绩效的主要渠道是提高效率和降低成本。
+本文研究对于推动企业数字化转型和实现经济高质量发展具有重要的政策含义。第一，政府、
+企业和学界应该通力合作，为企业数字化转型提供基础数据和基础研究。当前，企业在数字化转型
+方面之所以面临挑战，原因之一是缺乏统一的数字化转型度量以及权威的转型效果分析，这阻碍了
+有关部门及时地追踪并总结企业数字化转型的成败。要构建一套全面、统一、准确的数字化转型指
+数和数字化转型数据库，需要掌握企业在数字技术投入、人力投入、资金投入等多方面的信息，而目
+前学术界主要还是依赖文本分析。本文利用前沿的大语言模型构造的数字化转型指标，为此提供
+了前期基础和可行方向，但仍需相关数据相互验证。因此，只有政府、企业和学界的多方参与，才能
+摸清中国企业数字化转型的“底数”，进而为企业进行数字化转型提供理论指导和政策支持。
+第二，企业应坚定不移地推进数字化转型。本文研究表明，数字化转型通过提高效率和降低成
+本，能够改善企业的财务绩效。因此，中国企业应该克服“不愿转、不敢转”的心态，坚定拥抱数字化
+转型。特别是，在全球化时代，中国企业面临跨国巨头在规模、品牌、资金等方面的传统优势，更应
+50
+
+===== PAGE 18 =====
+2024 年第3 期
+该充分利用数字经济时代的后发优势，加大力度推进企业数字化转型，以此提高国际竞争力。
+第三，政府应根据不同企业的实际情况，推出差异化的数字化转型鼓励政策。本文研究表明，
+数字化转型对财务绩效较差和一般的企业更有作用，对财务绩效特别好的企业没有显著效果。因
+此，政府在推进企业数字化转型时，不能一刀切，要尊重规律，多给绩效较差的企业“雪中送炭”，少
+给绩效好的企业“锦上添花”，以免浪费宝贵的财政资源。这样可以更好地实现数字技术和实体经
+济的深度融合，促进经济高质量发展。
+第四，要鼓励中西部地区的企业加快数字化转型。经济发展水平较低的中西部地区企业数字
+化转型程度较低，更应该高度重视数字技术的利用，加快数字化转型的步伐。考虑到数字技术所具
+有的后发优势，政府可以针对中西部地区出台偏向性鼓励政策。例如，加大中西部地区的数字基础
+设施建设，鼓励东部发达地区的企业向中西部地区提供数字化转型的技术和人才支持。这有利于
+避免中西部地区和东部地区的企业形成“数字鸿沟”，从而更好地实现共同富裕。
+参考文献
+包群、梁贺，2022：
+《下放与改制：不同国企改革路径的绩效比较》，
+《世界经济》第6 期。
+蔡跃洲、牛新星，2021：
+《中国数字经济增加值规模测算及结构分析》，
+《中国社会科学》第11 期。
+车万翔、崔一鸣、郭江，2021：
+《自然语言处理：基于预训练模型的方法》，电子工业出版社。
+方明月、林佳妮、聂辉华，2022：
+《数字化转型是否促进了企业内共同富裕？——来自中国A 股上市公司的证据》，
+《数量经济技
+术经济研究》第11 期。
+何帆、刘红霞，2019：
+《数字经济视角下实体企业数字化变革的业绩提升效应评估》，
+《改革》第4 期。
+黄逵友、李增福、潘南佩、倪江崴，2023：
+《企业数字化转型与劳动收入份额》，
+《经济评论》第2 期。
+江艇，2022：
+《因果推断经验研究中的中介效应与调节效应》，
+《中国工业经济》第5 期。
+金环、魏佳丽、于立宏，2021：
+《网络基础设施建设能否助力企业转型升级——来自“宽带中国”战略的准自然实验》，
+《产业经济
+研究》第6 期。
+李磊、刘常青、韩民春，2022：
+《信息化建设能够提升企业创新能力吗？——来自“两化融合试验区”的证据》，
+《经济学（季刊）》
+第3 期。
+李万利、潘文东、袁凯彬，2022：
+《企业数字化转型与中国实体经济发展》，
+《数量经济技术经济研究》第9 期。
+李云鹤、蓝齐芳、吴文锋，2022：
+《客户公司数字化转型的供应链扩散机制研究》，
+《中国工业经济》第12 期。
+李舟军、范宇、吴贤杰，2020：
+《面向自然语言处理的预训练技术研究综述》，
+《计算机科学》第3 期。
+林心怡、吴东，2021：
+《区块链技术与企业绩效：公司治理结构的调节作用》，
+《管理评论》第11 期。
+刘飞，2020：
+《数字化转型如何提升制造业生产率——基于数字化转型的三重影响机制》，
+《财经科学》第10 期。
+刘飞、田高良，2019：
+《信息技术是否替代了就业——基于中国上市公司的证据》，
+《财经科学》第7 期。
+刘青、肖柏高，2023：
+《劳动力成本与劳动节约型技术创新——来自AI 语言模型和专利文本的证据》，
+《经济研究》第2 期。
+刘淑春、闫津臣、张思雪、林汉川，2021：
+《企业管理数字化变革能提升投入产出效率吗》，
+《管理世界》第5 期。
+祁怀锦、曹修琴、刘艳霞，2020：
+《数字经济对公司治理的影响——基于信息不对称和管理者非理性行为视角》，
+《改革》第4 期。
+宋弘、陆毅，2020：
+《如何有效增加理工科领域人才供给？——来自拔尖学生培养计划的实证研究》，
+《经济研究》第2 期。
+吴非、胡慧芷、林慧妍、任晓怡，2021：
+《企业数字化转型与资本市场表现——来自股票流动性的经验证据》，
+《管理世界》第7 期。
+许雪晨、田侃，2021：
+《一种基于金融文本情感分析的股票指数预测新方法》，
+《数量经济技术经济研究》第12 期。
+杨德明、刘泳文，2018：
+《“互联网+”为什么加出了业绩》，
+《中国工业经济》第5 期。
+杨金玉、彭秋萍、葛震霆，2022：
+《数字化转型的客户传染效应——供应商创新视角》，
+《中国工业经济》第8 期。
+耀友福、周兰，2023：
+《企业数字化影响关键审计事项决策吗？》，
+《审计研究》第1 期。
+袁淳、肖土盛、耿春晓、盛誉，2021：
+《数字化转型与企业分工：专业化还是纵向一体化》，
+《中国工业经济》第9 期。
+张叶青、陆瑶、李乐芸，2021：
+《大数据应用对中国企业市场价值的影响——来自中国上市公司年报文本分析的证据》，
+《经济研
+究》第12 期。
+赵宸宇、王文春、李雪松，2021：
+《数字化转型如何影响企业全要素生产率》，
+《财贸经济》第7 期。
+中国信息通信研究院，2021：
+《中国数字经济发展报告（2021 年）》，中国信息通信研究院网站。
+中国信息通信研究院，2022a：
+《全球数字经济白皮书（2022 年）》，中国信息通信研究院网站。
+51
+
+===== PAGE 19 =====
+金星晔等：企业数字化转型的测度难题：基于大语言模型的新方法与新发现
+中国信息通信研究院，2022b：
+《中国数字经济发展报告（2022 年）》，中国信息通信研究院网站。
+Acemoglu， D.， and P. Restrepo， 2020， “Robots and Jobs： Evidence from US Labor Markets”， Journal of Political Economy， 128（6）， 
+2188—2244.
+Acikalin， U.U.， T. Caskurlu， G. Hoberg， and G.M. Phillips， 2022， “Intellectual Property Protection Lost and Competition： An Ex⁃
+amination Using Machine Learning”， National Bureau of Economic Research（2022—11）.
+Alali， F. A.， and C. -L. Yeh， 2012， “Cloud Computing： Overview and Risk Analysis”， Journal of Information Systems， 26（2）， 
+13—33.
+Babina T.， A. Fedyk， A. He， and J. Hodson， 2024， “Artificial Intelligence， Firm Growth， and Product Innovation”， Journal of Fi⁃
+nancial Economics， 151， 103745.
+Bloom， N.， L. Garicano， R. Sadun， and J.V. Reenen， 2014， “The Distinct Effects of Information Technology and Communication 
+Technology on Firm Organization”， Management Science， 60（12）， 2859—2885.
+Brynjolfsson， E.， W. Jin， and K. McElheran， 2021， “The Power of Prediction： Predictive Analytics， Workplace Complements， and 
+Business Performance”， Business Economics， 56（4）， 217—239.
+Chen， Y.， 2020， “Improving Market Performance in the Digital Economy”， China Economic Review， 62， 101482.
+Chen， M.A.， Q. Wu， and B. Yang， 2019， “How Valuable is FinTech Innovation？”， Review of Financial Studies， 32（5）， 2062—2106.
+Chun， H.， J.-W. Kim， R. Morck， and B. Yeung， 2008， “Creative Destruction and Firm-Specific Performance Heterogeneity”， Jour⁃
+nal of Financial Economics， 89（1）， 109—135.
+Commander， S.， R. Harrison， and N. Menezes-Filho， 2011， “ICT and Productivity in Developing Countries： New Firm-Level Evi⁃
+dence from Brazil and India”， Review of Economics and Statistics， 93（2）， 528—541.
+DeStefano， T.， R. Kneller， and J. Timmis， 2018， “Broadband Infrastructure， ICT Use and Firm Performance： Evidence for UK 
+Firms”， Journal of Economic Behavior & Organization， 155， 110—139.
+Goldfarb， A.， and C. Tucker， 2019， “Digital Economics”， Journal of Economic Literature， 57（1）， 3—43.
+Hänninen， M.， A. Smedlund， and L. Mitronen， 2017， “Digitalization in Retailing： Multi-Sided Platforms as Drivers of Industry 
+Transformation”， Baltic Journal of Management， 13（2）， 152—168.
+Jin， W.， and K. McElheran， 2017， “Economies before Scale： Survival and Performance of Young Plants in the Age of Cloud Comput⁃
+ing”， SSRN working paper， No.3112901.
+Jain， A. WP， and C. Jain， 2019， “Blockchain Hysteria： Adding ‘Blockchain’ to Company’s Name”， Economics Letters， 181， 
+178—181.
+Loecker， J.D.， and F. Warzynski， 2012， “Markups and Firm-Level Export Status”， American Economic Review， 102（6）， 2437—2471.
+Ma， H.， M. Zhao， D. Yan， and H. Wang， 2021， The Chinese Digital Economy， Singapore： Springer Singapore.
+Müller， O.， M. Fay， and J. vom Brocke， 2018， “The Effect of Big Data and Analytics on Firm Performance： An Econometric Analy⁃
+sis Considering Industry Characteristics”， Journal of Management Information Systems， 35（2）， 488—509.
+Rajan， R.， P. Ramella， and L. Zingales， 2023， “What Purpose Do Corporations Purport？ Evidence from Letters to Shareholders”， 
+National Bureau of Economic Research（2023—03）.
+Sharma， P.， D. M. Shukla， and A. Raj， 2023， “Blockchain Adoption and Firm Performance： The Contingent Roles of Intangible 
+Capital and Environmental Dynamism”， International Journal of Production Economics， 256， 108727.
+Shivajee， V.， R.K. Singh， and S. Rastogi， 2019， “Manufacturing Conversion Cost Reduction Using Quality Control Tools and Digiti⁃
+zation of Real-Time Data”， Journal of Cleaner Production， 237， 117678.
+Siebel， T.M.， 2019， Digital Transformation： Survive and Thrive in an Era of Mass Extinction， New York： Rodin Books.
+Sun， Y.， S. Wang， Y. Li， S. Feng， X. Chen， H. Zhang， X. Tian， D. Zhu， H. Tian， and H. Wu， 2019， “ERNIE： Enhanced Repre⁃
+sentation Through Knowledge Integration”， arXiv：1904.09223 ［Cs］.
+Yadav， N.， 2014， “The Role of Internet Use on International Trade： Evidence from Asian and Sub-Saharan African Enterprises”， 
+Global Economy Journal， 14（2）， 189—214.
+Yang， S.， Z. Li， Y. Ma， and X. Chen， 2018， “Does Electronic Banking Really Improve Bank Performance？ Evidence in China”， 
+International Journal of Economics and Finance， 10（2）， 82—94.
+Zolas， N.， Z. Kroff， E. Brynjolfsson， K. McElheran， D.N. Beede， C. Buffington， N. Goldschlag， L. Foster， and E. Dinlersoz， 2020， 
+“Advanced Technologies Adoption and Use by U.S. Firms： Evidence from the Annual Business Survey”， National Bureau of Economic Re⁃
+search（2020—12）.
+52
+
+===== PAGE 20 =====
+2024 年第3 期
+Measurement Problem of Enterprise Digital Transformation: 
+New Methods and Findings Based on Large Language Models
+JIN Xingye
+a, ZUO Congjiang
+a, FANG Mingyue
+b, LI Tao
+a and NIE Huihua
+c
+(a: School of Economics, Central University of Financial and Economics;
+b: College of Economics and Management, China Agricultural University;
+c: School of Economics, Renmin University of China)
+Summary: The rapidly growing digital economy in China has become the second-largest digital economy in the world. 
+The importance of digital transformation for enterprises is widely acknowledged, but there are serious disagreements 
+about the effects of enterprise digital transformation. The main reason for this phenomenon is that existing research has 
+problems in measuring enterprise digital transformation, which is reflected in two aspects: Firstly, the measurement ob‐
+jects are neither unified nor clearly defined; secondly, the measurement methods are not scientific and accurate enough. 
+This results in many research conclusions being incomparable, difficult to replicate, and often contradictory. Therefore, to 
+ensure that theory effectively informs practice, academia needs to reach a consensus on the measurement of enterprise 
+digital transformation and work hard to alleviate the problem of inaccurate measurement methods. Only in this way can 
+the confusion be clarified, and the way for theoretical insights be paved.
+This paper uses an advanced machine learning method, the large language models, to construct a set of digital trans‐
+formation indicators based on the annual report texts of Chinese listed companies from 2006 to 2020. Specifically, the in‐
+dicators are measured in five steps. The first step is to sort out the annual reports of listed companies, and use the two 
+parts of the annual report, “Management Discussion and Analysis” and “Table of Contents, Definitions, and Key Risk In‐
+dicators” as relevant texts for enterprise digital transformation. The second step is to divide all texts into sentences to 
+form a predictive sentence pool. In the third step, a set of sentences is randomly selected and extracted based on the pres‐
+ence of keywords to constitute a pending tagged sentence library. This library is manually annotated to determine whether 
+companies are using digital technologies including big data, artificial intelligence (AI), mobile Internet, Internet of 
+Things, blockchain, and cloud computing. The fourth step uses supervised machine learning methods with models such as 
+ERNIE and BERT for the training of sentence classifiers. The fifth step is to use the trained ERNIE model to predict sen‐
+tence by sentence in the predictive sentence pool, to assess whether and which digital technologies are utilized by the 
+listed companies, thereby constructing a new set of digital transformation indicators for enterprises. To verify the effec‐
+tiveness of the new indicators, this paper conducts comparisons with patent data, regional data and international literature 
+in six aspects, and finds that the digital transformation indicators constructed are highly consistent with reality. With these 
+indicators, this paper empirically tests the relationship between enterprise digital transformation and corporate financial 
+performance, and obtains some new findings. Digital transformation generally improves financial performance (measured 
+with ROA and ROE). Big data, AI, mobile Internet, cloud computing, and Internet of Things improve ROA and ROE, 
+while blockchain has no such effect. For companies with poor financial performance, digital transformation can signifi‐
+cantly improve financial performance, while for companies with good financial performance, digital transformation has 
+no significant effect on financial performance. There are two main channels for enterprise digital transformation to im‐
+prove financial performance, namely, improving efficiency and reducing costs.
+The contributions of this paper can be summarized in three aspects. Firstly, this paper provides a new method for 
+measuring enterprise digital transformation. It proposes a novel approach to construct digital transformation indicators 
+based on the annual reports of listed companies in China. The new indicators promote in-depth research on enterprise digi‐
+tal transformation in terms of research methods, and provide empirical evidence from China for the general digital eco‐
+nomics literature. Secondly, this paper reveals impacts of different digital technologies on corporate financial perfor‐
+mance and identifies different channels. Thirdly, this paper enriches the application of large language models in economic 
+literature, for there are limited studies using large language models. This article is of great significance for promoting en‐
+terprise digital transformation and achieving high-quality economic development.
+Keywords: Enterprise Digital Transformation; Digital Economy; Digital Technology; Artificial Intelligence; Large Lan‐
+guage Models
+JEL Classification: C89, C43, C45 
+（责任编辑：刘洪愧）（校对：何　伟）
+53
