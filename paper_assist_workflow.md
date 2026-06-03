@@ -49,8 +49,8 @@ paper assist 是一个面向**经济学与管理学领域**研究者的一体化
 
 | 序号 | 模块名称 | 状态 | Skill 文件 | 核心指令 |
 | - | - | - | - | - |
-| 1 | 文献阅读 | ✅ 已完成 | paper_reading_skills.md | 泛读、精读、对比 |
-| 2 | 选题辅助 | 🔧 开发中 | topic_selection_skills.md | 挖掘缺口、评估选题、趋势分析、拓展选题、复制拓展、打磨选题、论证意义 |
+| 1 | 文献阅读 | ✅ 已完成 | paper_reading_skills.md（规范） / `~/.claude/skills/paper-reader/SKILL.md`（执行） | 泛读、精读、对比 |
+| 2 | 选题辅助 | ✅ 已完成 | topic_selection_skills.md（规范） / `~/.claude/skills/topic-selection/SKILL.md`（执行） | 挖掘缺口、评估选题、趋势分析、拓展选题、复制拓展、打磨选题、论证意义 |
 | 3 | 研究设计 | 📋 规划中 | — | — |
 | 4 | 数据与实证 | 📋 规划中 | — | — |
 | 5 | 论文写作 | 📋 规划中 | — | — |
@@ -78,7 +78,7 @@ paper assist 是一个面向**经济学与管理学领域**研究者的一体化
 
 ---
 
-### 模块 2：选题辅助（开发中）
+### 模块 2：选题辅助（已完成）
 
 **职责：** 帮助研究者从模糊兴趣收敛到可操作的 research question，并进行系统性可行性评估。
 
