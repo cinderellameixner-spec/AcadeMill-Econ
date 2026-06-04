@@ -1,6 +1,6 @@
 # paper assist — 科研工作流 Agent
 
-这是一个面向**经济学与管理学研究者**的一体化科研 agent。目标是把科研流程中重复性高、结构化强的环节自动化，让研究者专注于真正需要创造力的部分。项目按 6 个模块规划（详见 §0），**当前文献阅读、选题辅助、研究设计、数据与实证模块已完成，其余模块开发 / 规划中**。
+这是一个面向**经济学与管理学研究者**的一体化科研 agent。目标是把科研流程中重复性高、结构化强的环节自动化，让研究者专注于真正需要创造力的部分。项目按 6 个模块规划（详见 §0），**当前文献阅读、选题辅助、研究设计、数据与实证、论文写作模块已完成，学术报告模块规划中**。
 
 各模块的执行细则由各自的子 CLAUDE.md 与 skill 文件承载，本文件只承担**全局路由**职责：项目定位、模块总览、触发词分派、开发规范。
 
@@ -24,7 +24,7 @@
 | 2 | 选题辅助 | ✅ 已完成 | topic_selection_skills.md（规范） / `~/.claude/skills/topic-selection/SKILL.md`（执行） | 挖掘缺口、评估选题、趋势分析、拓展选题、复制拓展、打磨选题、论证意义 |
 | 3 | 研究设计 | ✅ 已完成 | research_design_skills.md（规范） / `~/.claude/skills/research-design/SKILL.md`（执行） | 识别方案、设计参考、内生性诊断、稳健性清单 |
 | 4 | 数据与实证 | ✅ 已完成 | data_empirical_skills.md（规范） / `~/.claude/skills/data-empirical/SKILL.md`（执行） | 数据推荐、变量构造、描述统计、回归代码 |
-| 5 | 论文写作 | 📋 规划中 | — | — |
+| 5 | 论文写作 | ✅ 已完成 | paper_writing_skills.md（规范） / `~/.claude/skills/paper-writing/SKILL.md`（执行） | 综述生成、引言起草、摘要生成、背景理论、结果描述、结论撰写、表达润色、审稿模拟、回应审稿、开题报告 |
 | 6 | 学术报告 | 📋 规划中 | — | — |
 
 模块职责、上下游数据流、阅读 ⇄ 选题 的三种使用路径（先读后选 / 先选后读 / 交替迭代）、选题辅助模块「解决什么问题」与「七指令组合路径 A/B/C/D」均详见 [paper_assist_workflow.md](paper_assist_workflow.md)。
@@ -51,7 +51,17 @@
 | 变量构造 | 数据与实证 | data_empirical_skills.md | 核心变量操作性定义 + Stata/Python 构造代码 + 常见坑预警 |
 | 描述统计 | 数据与实证 | data_empirical_skills.md | 描述统计表 / 相关矩阵 / 分组均值差异 / 分布检查代码模板 |
 | 回归代码 | 数据与实证 | data_empirical_skills.md | 主回归 + 平行趋势 + 稳健性 + 异质性 + 机制检验代码框架 |
-| 论文写作 / 学术报告 | 规划中 | — | 触发词待定 |
+| 综述生成 | 论文写作 | paper_writing_skills.md | 基于 Zotero 笔记 + 对比表生成文献综述初稿 |
+| 引言起草 | 论文写作 | paper_writing_skills.md | 五段式引言（背景/缺口/做法/发现/贡献），复用【论证意义】【挖掘缺口】 |
+| 摘要生成 | 论文写作 | paper_writing_skills.md | 中英文摘要 + 关键词 + JEL Classification |
+| 背景理论 | 论文写作 | paper_writing_skills.md | 制度背景梳理 + 理论机制推导 + H1—H3 假设 |
+| 结果描述 | 论文写作 | paper_writing_skills.md | 回归表 → 规范结果描述段落（主回归/稳健性/异质性/机制） |
+| 结论撰写 | 论文写作 | paper_writing_skills.md | 四段式结论（发现/启示/局限/未来）+ 与引言呼应检查 |
+| 表达润色 | 论文写作 | paper_writing_skills.md | 中/英文学术润色 + 修改日志 + 阈值原则 |
+| 审稿模拟 | 论文写作 | paper_writing_skills.md | Reviewer 视角意见稿，致命/小问题分级（仅报错） |
+| 回应审稿 | 论文写作 | paper_writing_skills.md | 逐条拆解 referee report → Response Letter 框架 |
+| 开题报告 | 论文写作 | paper_writing_skills.md | 整合模块 1—4 全部产出 → 完整开题报告 |
+| 学术报告 | 规划中 | — | 触发词待定 |
 
 > 文献阅读模块的**操作级分派**（含 PDF 上传、检索+阅读自然语言、Zotero 归档流程、MCP 自检安装、行为约束等）见 [paper-reading/CLAUDE.md](paper-reading/CLAUDE.md)。
 
