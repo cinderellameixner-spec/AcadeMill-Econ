@@ -1,0 +1,2 @@
+# Text-based PDF extraction; no OCR included
+PyMuPDF>=1.24,<2

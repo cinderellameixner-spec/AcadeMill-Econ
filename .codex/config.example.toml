@@ -1,0 +1,21 @@
+# Windows stdio example, not an active configuration.
+# Replace every <...> path before copying to config.toml; keep only needed servers.
+# Install chosen MCP packages separately and verify their CLI flags first.
+[mcp_servers.cnki-browser]
+command = "cmd"
+args = ["/c", "<absolute-path-to-chrome-devtools-mcp.cmd>", "--executablePath", "<absolute-path-to-msedge.exe>", "--userDataDir", "<absolute-path-to-dedicated-edge-profile-outside-repo>"]
+startup_timeout_sec = 45
+
+[mcp_servers.gs-browser]
+command = "cmd"
+args = ["/c", "<absolute-path-to-chrome-devtools-mcp.cmd>", "--executablePath", "<absolute-path-to-chrome.exe>", "--userDataDir", "<absolute-path-to-dedicated-chrome-profile-outside-repo>"]
+startup_timeout_sec = 45
+
+[mcp_servers.zotero]
+command = "<absolute-path-to-zotero-mcp.exe>"
+args = ["serve"]
+startup_timeout_sec = 30
+
+[mcp_servers.zotero.env]
+ZOTERO_LOCAL = "true"
+PYTHONIOENCODING = "utf-8"

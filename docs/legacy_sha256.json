@@ -1,0 +1,19 @@
+{
+  "base_commit": "acd7630ad36ab7246b6630f0ae5a6288005900bb",
+  "normalization": "CRLF to LF",
+  "files": {
+    ".claude/settings.json": "9ad0e07eb0b379ff62c2aecda42df9be1d6d11b92c79333b8eeba76ba90e5314",
+    "CLAUDE.md": "c63b1a7f3a59ae3f2f040dd3fff88e628291ef67fc87c2f1bb4a07df332c51a6",
+    "LICENSE": "1eec0c5dca3d63256a84f3e368a5b75fd83fe7529edaebf3b524c888d19bf4ab",
+    "academic_presentation_skills.md": "ef0ac8ff081ec450cc30d6f31e8b9b5890ea95e9ce5cdf90d5033027e49a4dc5",
+    "data_empirical_skills.md": "60c2c40a62b2dfb6f705b7f7a4f4794bd3da1dd35a0bc61834e8d92dca4baef3",
+    "paper-reading/CLAUDE.md": "c0d12b03ff00ee0da67b14765f084b258e93af74d5a9ae6716d38c7630f303b7",
+    "paper_assist_workflow.md": "bf0b17edb042550543e3efb0fe0f635649b0dfff60d608d6f835d51f6d1f29e3",
+    "paper_reading_skills.md": "3a89b2e58756b75333ad3b90d2984c87fabb82b1d39411c3d5d60aa528a75719",
+    "paper_writing_skills.md": "c870aa79191f995dcaf4ba72fc06d142a7162a1fa1c2a525d67aa9d17d776546",
+    "research_design_skills.md": "2572ca36165e0a9d5ab7cf944b2e00033d7ef7adeb7b24a2a096bb98bcd339f2",
+    "tools/extract_pdf.py": "350af3bc0ddf6526b08c5de60c4089c3fc87aa7810b299ade7059ceb1b19655f",
+    "tools/switch-browser.ps1": "6bb2c18eb9263d0bb50e6f93fcf52ae813874d58963bc5a5c59aac3dac43d87f",
+    "topic_selection_skills.md": "29303a6e9631a9b3ef6f1b5c9e2e70acc2c4bed802a0ffce7ecedf4ee27a919c"
+  }
+}
