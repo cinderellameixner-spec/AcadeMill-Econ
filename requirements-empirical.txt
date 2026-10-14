@@ -1,0 +1,6 @@
+# Optional, only needed when running generated empirical code
+-r requirements.txt
+pandas>=2.2,<4
+numpy>=1.26,<3
+statsmodels>=0.14,<1
+linearmodels>=6,<8

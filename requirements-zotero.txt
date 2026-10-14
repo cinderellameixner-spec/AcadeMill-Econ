@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional Web API archive helper
+pyzotero>=1.12,<2

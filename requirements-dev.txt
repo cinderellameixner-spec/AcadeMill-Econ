@@ -1,0 +1,3 @@
+-r requirements.txt
+# Skill and CI YAML validation
+PyYAML>=6,<7

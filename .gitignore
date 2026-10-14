@@ -1,44 +1,39 @@
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Editor
-.vscode/
-.idea/
-*.swp
-*~
-
-# Python
+# Runtime and machine configuration
 __pycache__/
 *.py[cod]
-*.egg-info/
 .venv/
 venv/
-.ipynb_checkpoints/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+/.codex/config.toml
+/.claude/settings.local.json
+/LOCAL_PREFERENCES.md
+.vscode/
+*.code-workspace
 
-# Logs / temp
-*.log
-*.tmp
-*.bak
-
-# 原始论文 PDF / 阅读材料（源材料，体积大，不入库）
-inbox/*.pdf
-inbox/*.caj
-inbox/.attach_pdf.py
-inbox/.p*_export.json
-inbox/P*_pages_*.txt
-
-# 项目本地数据（不入库）
-*.docx
-*.xlsx
-!docs/**/*.pdf
-
-# Stata / Python 输出
+# Keep research/AGENTS.md public; ignore generated projects and materials
+/research/*/
+/research/INDEX.md
+/research/.*.reserved/
+/inbox/
+/work/
+/output/
+*.pdf
+*.caj
 *.dta
-*.smcl
-output/
-results/
+*.sav
+*.xlsx
+*.xls
+*.csv
+*.tsv
 
-# 本机特有的权限配置（Claude Code 本地文件，不跨机器共享）
-.claude/settings.local.json
+# Secrets and machine state
+*.key
+*.pem
+*.log
+node_modules/
+.cache/
+.DS_Store
+Thumbs.db
